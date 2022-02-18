@@ -1,0 +1,30 @@
+{
+  "name": "turborepo-basic-shared",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --scope='web'",
+    "dev:docs": "turbo run dev --scope='docs'",
+    "serve:web": "turbo run start --scope='web'",
+    "serve:docs": "turbo run start --scope='docs'",
+    "lint": "turbo run lint",
+    "storybook": "turbo run storybook --scope='ui' --no-deps",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "yarn@1.22.17"
+}
