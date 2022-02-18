@@ -11,6 +11,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "dev": "turbo run dev --parallel",
+    "dev:blog": "turbo run dev --scope='blog'",
     "dev:web": "turbo run dev --scope='web'",
     "dev:docs": "turbo run dev --scope='docs'",
     "serve:web": "turbo run start --scope='web'",
