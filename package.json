@@ -9,9 +9,10 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:ui": "turbo run build --scope='ui' --no-deps",
     "test": "turbo run test",
     "dev": "turbo run dev --parallel",
-    "dev:blog": "turbo run dev --scope='blog'",
+    "dev:blog": "yarn build:ui && turbo run dev --scope='blog'",
     "dev:web": "turbo run dev --scope='web'",
     "dev:docs": "turbo run dev --scope='docs'",
     "serve:web": "turbo run start --scope='web'",
