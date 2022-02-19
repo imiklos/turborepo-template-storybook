@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "ui/dist";
 
 export default function Index() {
   return (
